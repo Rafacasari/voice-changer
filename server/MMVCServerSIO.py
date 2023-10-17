@@ -64,6 +64,7 @@ def setupArgParser():
     parser.add_argument("--rmvpe", type=str, default="pretrain/rmvpe.pt", help="path to rmvpe")
     parser.add_argument("--rmvpe_onnx", type=str, default="pretrain/rmvpe.onnx", help="path to rmvpe onnx")
 
+    parser.add_argument("--rmvpe_only", type=strtobool, default=False, help="Will download only rmvpe weight")
     return parser
 
 
@@ -106,6 +107,7 @@ voiceChangerParams = VoiceChangerParams(
     rmvpe=args.rmvpe,
     rmvpe_onnx=args.rmvpe_onnx,
     sample_mode=args.sample_mode,
+    rmvpe_only=args.rmvpe_only
 )
 vcparams = VoiceChangerParamsManager.get_instance()
 vcparams.setParams(voiceChangerParams)
