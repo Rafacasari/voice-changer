@@ -32,7 +32,6 @@ def downloadWeight(voiceChangerParams: VoiceChangerParams):
     def addToQueue(url, saveTo):
         global downloadQueueSize
         global downloadParams
-        print(downloadQueueSize)
         
         downloadParams.append({
             "url": url,

@@ -1,6 +1,6 @@
 import requests  # type: ignore
 import os
-from tqdm.auto import tqdm
+from tqdm.autonotebook import tqdm
 
 from mods.log_control import VoiceChangaerLogger
 
